@@ -29,7 +29,7 @@
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "release": "bumpp && npm publish",
+    "release": "bumpp && npm publish --access",
     "test": "vitest --run",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",

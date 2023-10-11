@@ -1,4 +1,4 @@
-export function codegen(node) {
+export function codegen(node: any): any {
   switch (node.type) {
     case 'Program':
       return node.body.map(codegen).join('\n')
