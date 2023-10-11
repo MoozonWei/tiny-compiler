@@ -1,7 +1,7 @@
 {
-  "name": "tiny-compiler",
+  "name": "@moozon/tiny-compiler",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tiny compiler for learning",
   "author": "Moozon <i@moo.zone>",
   "license": "MIT",
