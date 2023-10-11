@@ -1,0 +1,30 @@
+{
+  "name": "tiny-compiler",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Moozon <i@moo.zone>",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "test": "vitest --run",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "1.0.0-beta.22",
+    "eslint": "^8.51.0",
+    "lint-staged": "^14.0.1",
+    "simple-git-hooks": "^2.9.0",
+    "vitest": "^0.34.6"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
