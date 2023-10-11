@@ -2,12 +2,36 @@
   "name": "tiny-compiler",
   "type": "module",
   "version": "0.0.1",
-  "description": "",
+  "description": "tiny compiler for learning",
   "author": "Moozon <i@moo.zone>",
   "license": "MIT",
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoozonWei/tiny-compiler.git"
+  },
+  "bugs": "https://github.com/MoozonWei/tiny-compiler/issues",
+  "keywords": [
+    "the-super-tiny-compiler"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "release": "bumpp && npm publish",
     "test": "vitest --run",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -16,9 +40,12 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.22",
+    "bumpp": "^9.2.0",
     "eslint": "^8.51.0",
+    "esno": "^0.17.0",
     "lint-staged": "^14.0.1",
     "simple-git-hooks": "^2.9.0",
+    "unbuild": "^2.0.0",
     "vitest": "^0.34.6"
   },
   "simple-git-hooks": {
